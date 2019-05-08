@@ -28,6 +28,9 @@
 */
 
 // Code Here 
+function first(arr, cb){
+   return cb(arr[0])
+}
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -48,6 +51,9 @@ first(names, function(firstName){
 */
 
 //Code Here
+function last(names, cb){
+  return cb(names[names.length -1])
+}
 
 // Do not edit the code below.
 last(names, function(lastName){
