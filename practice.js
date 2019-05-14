@@ -73,6 +73,10 @@ last(names, function(lastName){
 
 //Code Here
 
+function multiply (num1, num2, cb){
+  return cb(num1 * num2)
+}
+
 // Do not edit the code below.
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
@@ -91,6 +95,11 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
+var contains = function(names, str, cb){
+  for(let i = 0; i < names.length; i++){
+    names[i] === str ? cb(true) : cb(false)
+  }
+ }
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -112,6 +121,21 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+function uniq (names, cb){
+
+  for( var i = 0; i < names.length; i++){
+    for( j = i + 1; j < names.length; j++){
+      if( names[i] === names[j]){
+      names.splice(i, 1)
+      j--
+        
+      }
+    }
+
+  } 
+  cb(names)
+   
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -128,7 +152,16 @@ uniq(names, function(uniqArr){
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
+
+
 //Code Here 
+function each (names, cb){
+  for (i = 0; i < names.length; i++){
+    cb(names[i], i)
+  }
+
+}
+
 
 // Do not edit the code below.
 each(names, function(item, indice){
@@ -146,6 +179,14 @@ each(names, function(item, indice){
 */
 
 // Code here
+
+function getUserById (users, id, cb){
+  for (i = 0; i < users.length; i++){
+    if (users[i].id=== id){
+        cb (users[i])
+    }
+  }
+}
 
 // Do not edit the code below.
 var users = [
